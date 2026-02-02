@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Valentine 💖</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+
+  h1 {
+    color: #e91e63;
+    font-size: 1.8rem;
+  }
+
+  p {
+    color: #555;
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    position: relative;
+  }
+
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  #yesBtn {
+    background: #e91e63;
+    color: white;
+    margin-right: 10px;
+  }
+
+  #noBtn {
+    background: #ddd;
+    position: absolute;
+  }
+
+  .flowers {
+    position: absolute;
+    font-size: 24px;
+    animation: float 6s infinite linear;
+    opacity: 0.8;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-10vh); }
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+
+<body>
+
+<audio id="music" autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container" id="card">
+  <h1>Adedolapo 💖</h1>
+  <p>Will you be my Valentine? 🌹</p>
+
+  <div class="buttons">
+    <button id="yesBtn">YES 💕</button>
+    <button id="noBtn">NO 🙃</button>
+  </div>
+</div>
+
+<div class="container hidden" id="message">
+  <h1>Yayyy!!! 💘🎉</h1>
+  <p>
+    You just made me the happiest person ever 💕  
+    I can’t wait to spend Valentine’s Day with you,  
+    creating beautiful memories together 🌹✨
+  </p>
+</div>
+
+<script>
+  const noBtn = document.getElementById("noBtn");
+  const yesBtn = document.getElementById("yesBtn");
+  const card = document.getElementById("card");
+  const message = document.getElementById("message");
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  yesBtn.addEventListener("click", () => {
+    card.classList.add("hidden");
+    message.classList.remove("hidden");
+  });
+
+  const flowers = ["🌸","🌹","🌷","💐","🌺","🌻"];
+  for (let i = 0; i < 20; i++) {
+    const flower = document.createElement("div");
+    flower.className = "flowers";
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = (Math.random() * 3 + 4) + "s";
+    flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+    document.body.appendChild(flower);
+  }
+</script>
+
+</body>
+</html>

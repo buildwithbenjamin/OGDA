@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Valentine 💖</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+
+  h1 {
+    color: #e91e63;
+    font-size: 1.8rem;
+  }
+
+  p {
+    color: #555;
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    margin-top: 20px;
+    position: relative;
+  }
+
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  #yesBtn {
+    background: #e91e63;
+    color: white;
+    margin-right: 10px;
+  }
+
+  #noBtn {
+    background: #ddd;
+    position: absolute;
+  }
+
+  .flowers {
+    position: absolute;
+    fo
